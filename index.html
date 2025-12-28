@@ -1,254 +1,262 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BRB Property Solutions | UK Property Investors</title>
-  <meta name="description" content="BRB Property Solutions – UK property investors specialising in hard-to-sell and hard-to-rent properties, rent-to-rent, lease options, and BRRR strategies." />
+  <title>BRB Property Solutions | Ethical Housing</title>
+
   <style>
-    :root {
-      --primary: #000000;
-      --secondary: #d4af37;
-      --light: #1c1c1c;
-      --dark: #ffffff;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
+    body{
+      margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
-      color: #eaeaea;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      color: #ffffff;
-      padding: 3rem 1.5rem;
-      text-align: center;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color:#fff;
+      text-align:center;
     }
 
-    /* Logo badge: crops the black margins so the mark feels integrated */
-    .logo-wrap{
-      width: 260px;
-      height: 120px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      border: 1px solid rgba(212,175,55,0.22);
-      box-shadow: 0 16px 46px rgba(0,0,0,0.55);
-      margin: 0 auto 1.4rem;
-      position: relative;
-      overflow: hidden;
+    header{
+      padding:60px 20px 40px;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    .logo{
+      max-width:220px;
+      margin-bottom:20px;
     }
-    header p {
-      max-width: 800px;
-      margin: 0.5rem auto 1.5rem;
-      font-size: 1.1rem;
+
+    h1{
+      font-size:2.4rem;
+      margin:10px 0;
     }
-    .cta {
-      background: var(--secondary);
-      color: #000;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-    }
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    section h2{
-      text-align: center;
-      margin: 0 0 2rem;
-      color: #d4af37;
-      font-size: 2rem;
-      letter-spacing: 0.2px;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .card{
-      background: rgba(255,255,255,0.04);
-      color: #eaeaea;
-      padding: 1.75rem;
-      border-radius: 14px;
-      border: 1px solid rgba(212,175,55,0.18);
-      box-shadow: 0 14px 34px rgba(0,0,0,0.55);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-    }
-    .card:hover{
-      transform: translateY(-3px);
-      border-color: rgba(212,175,55,0.38);
-      background: rgba(255,255,255,0.06);
-    }
-    .card h3{
-      margin: 0 0 0.55rem;
-      color: #d4af37;
-    }
-    .about {
-      background: rgba(255,255,255,0.03);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .about-text{
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      color: #e6e6e6;
-    }
-    .why-us ul {
-      max-width: 800px;
-      margin: auto;
-      padding-left: 1.2rem;
-    }
-    .why-us li {
-      margin-bottom: 0.75rem;
-    }
-    .contact {
-      text-align: center;
-    }
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-    }
-    footer a { color: var(--secondary); text-decoration: none; }
-  
-    
+
     .tagline{
-      display: block;
-      text-align: center;
-      margin: 0.75rem auto 1.5rem;
-      color: #d4af37;
-      font-weight: 500;
-      letter-spacing: 0.3px;
+      display:block;
+      margin:14px auto 20px;
+      font-size:1.1rem;
+      color:#d4af37;
+      font-weight:600;
     }
-  
+
+    .intro{
+      max-width:720px;
+      margin:0 auto 28px;
+      color:#ddd;
+      line-height:1.6;
+    }
+
+    .cta-row{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
     .cta-link{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin: 0.4rem;
-      padding: 0.75rem 1.4rem;
-      background: #d4af37;
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 6px;
-    }
-    .phone-icon{
-      font-size: 1.2rem;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 26px;
+      background:#d4af37;
+      color:#000;
+      text-decoration:none;
+      font-weight:800;
+      border-radius:10px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.35);
+      transition:transform .15s ease, filter .15s ease;
     }
 
-    /* Hide phone link on desktop */
-    @media (min-width: 768px){
-      .phone-link{ display:none; }
-    }
+    .cta-link:hover{
+      transform:translateY(-1px);
+      filter:brightness(1.05);
     }
 
-    /* Hide phone link on devices that cannot call */
-    @media (hover:hover){
-      .phone-link{ display:none; }
+    .icon-phone{
+      width:18px;
+      height:18px;
+      display:block;
+    }
+
+    .sr-label{
+      position:absolute;
+      left:-9999px;
+    }
+
+    .desktop-tip{
+      display:none;
+      margin:12px auto 0;
+      font-size:.95rem;
+      color:rgba(212,175,55,.9);
+      border-bottom:1px dotted rgba(212,175,55,.6);
+      width:max-content;
+      cursor:help;
+      position:relative;
+    }
+
+    .desktop-tip:hover::after{
+      content:"Phone links open on mobile. On desktop, dial 01279 414457.";
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:150%;
+      background:#000;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:10px;
+      white-space:nowrap;
+      border:1px solid rgba(212,175,55,.3);
+      box-shadow:0 14px 30px rgba(0,0,0,.6);
+      z-index:9999;
+    }
+
+    .section{
+      padding:70px 20px;
+    }
+
+    .section h2{
+      color:#d4af37;
+      margin-bottom:20px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+      gap:24px;
+      max-width:1000px;
+      margin:0 auto;
+    }
+
+    .card{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(212,175,55,.2);
+      border-radius:14px;
+      padding:24px;
+      text-align:left;
+    }
+
+    .card h3{
+      color:#d4af37;
+      margin-top:0;
+    }
+
+    footer{
+      padding:40px 20px;
+      font-size:.9rem;
+      color:#aaa;
+    }
+
+    /* Mobile / Desktop rules */
+    @media(min-width:768px){
+      .phone-link{ display:none !important; }
+      .desktop-tip{ display:block; }
+    }
+
+    /* Sticky mobile call button */
+    .sticky-call{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:16px;
+      display:none;
+      align-items:center;
+      gap:10px;
+      padding:14px 22px;
+      background:#d4af37;
+      color:#000;
+      font-weight:900;
+      border-radius:999px;
+      text-decoration:none;
+      box-shadow:0 18px 44px rgba(0,0,0,.55);
+      z-index:9999;
+    }
+
+    @media(max-width:767px){
+      .sticky-call{ display:inline-flex; }
+      body{ padding-bottom:90px; }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <!-- Optimised logo file: logo.jpg -->
-  <div class="logo-wrap">
-    <img src="logo.png" alt="BRB Property Solutions Logo" style="height:110px;width:auto;max-width:520px;display:block;filter:drop-shadow(0 14px 26px rgba(0,0,0,0.65));">
-  </div>
-  <h1 style="font-size:3rem;letter-spacing:1px;">BRB Property Solutions</h1>
-  <p style="font-size:1.6rem;font-weight:600;color:#d4af37;margin:0.75rem 0 0.5rem;"><span class="tagline">Ethical Housing. Professional Property Solutions.</span></p>
-  <div style="width:120px;height:3px;background:#d4af37;margin:1rem auto;"></div>
-  <p style="max-width:900px;margin:0 auto 2rem;font-size:1.1rem;color:#f2f2f2;">
-    Providing responsible, transparent, and effective solutions for property owners, landlords, and investors across the UK.
+  <img src="logo.jpg" alt="BRB Property Solutions logo" class="logo">
+
+  <h1>BRB Property Solutions</h1>
+  <span class="tagline">Ethical Housing. Professional Property Solutions.</span>
+
+  <p class="intro">
+    Providing responsible, transparent, and effective solutions for property owners,
+    landlords, and investors across the UK.
   </p>
-  <a href="#contact" class="cta"><a href="mailto:info@brbpropertysolutions.com" class="cta-link email-link">Get a Free Consultation</a>
-<a href="tel:07805469675" class="cta-link phone-link" aria-label="Call BRB Property Solutions">
-  <span class="phone-icon">📞</span>
-</a><a href="tel:07805469675" class="cta-link phone-link">Call Us Now</a></a>
+
+  <div class="cta-row">
+    <a
+      href="mailto:info@brbpropertysolutions.com?subject=Website%20Enquiry%20-%20BRB%20Property%20Solutions"
+      class="cta-link email-link"
+      data-track="email-cta">
+      Get a Free Consultation
+    </a>
+
+    <a
+      href="tel:01279414457"
+      class="cta-link phone-link"
+      aria-label="Call BRB Property Solutions"
+      data-track="phone-cta">
+      <svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/>
+      </svg>
+      <span class="sr-label">Call</span>
+    </a>
+  </div>
+
+  <span class="desktop-tip">Call: 01279 414457</span>
 </header>
 
-<section class="about">
-  <h2>About Us</h2>
-  <p class="about-text">
-    BRB Property Solutions is a UK‑based property investor business specialising in creative and ethical property solutions.
-    We work with landlords, homeowners, and investors who need quick, reliable, and stress‑free outcomes — even when
-    properties are difficult to sell, let, or manage.
-  </p>
-</section>
-
-<section>
+<section class="section">
   <h2>Our Services</h2>
-  <div class="services">
+  <div class="cards">
     <div class="card">
-      <h3>Purchase of Hard‑to‑Sell Properties</h3>
-      <p>We buy properties that struggle on the open market, offering fast decisions and flexible purchase structures.</p>
+      <h3>Purchase of Hard-to-Sell Properties</h3>
+      <p>Fast, flexible purchases for properties struggling on the open market.</p>
     </div>
     <div class="card">
-      <h3>Letting Hard‑to‑Rent Properties</h3>
-      <p>Solutions for properties with low demand, condition issues, or management challenges.</p>
+      <h3>Letting Hard-to-Rent Properties</h3>
+      <p>Solutions for low-demand or problematic rental properties.</p>
     </div>
     <div class="card">
-      <h3>Rent‑to‑Rent (Guaranteed Rent)</h3>
-      <p>Peace of mind for landlords with consistent rental income and hands‑off management.</p>
+      <h3>Rent-to-Rent (Guaranteed Rent)</h3>
+      <p>Hands-off management and consistent income.</p>
     </div>
     <div class="card">
       <h3>Lease Option Agreements</h3>
-      <p>Quick resolutions with an assured purchase after the agreed term, ideal for sellers needing certainty.</p>
+      <p>Assured purchase after an agreed term.</p>
     </div>
     <div class="card">
       <h3>BRRR Strategy</h3>
-      <p>Buy, Refurbish, Refinance, Rent solutions for derelict or abandoned properties.</p>
+      <p>Buy, Refurbish, Refinance, Rent for distressed properties.</p>
     </div>
   </div>
 </section>
 
-<section class="why-us">
-  <h2>Why Choose BRB Property Solutions?</h2>
-  <ul>
-    <li>UK‑based, experienced property investors</li>
-    <li>Flexible and creative solutions tailored to your situation</li>
-    <li>No estate agent fees on direct purchases</li>
-    <li>Fast decisions and clear communication</li>
-    <li>Ethical, transparent, and professional approach</li>
-  </ul>
-</section>
-
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>Speak to us today for a confidential, no‑obligation discussion about your property.</p>
-  <p><strong>Email:</strong> info@bbrpropertysolutions.co.uk</p>
-  <p><strong>Phone:</strong> 07805469675</p>
-  <p><em>Serving property owners across the UK</em></p>
-</section>
-
 <footer>
-  <p>© <span id="year"></span> BRB Property Solutions. All rights reserved.</p>
-  <p>UK Property Investors | <a href="#">Privacy Policy</a></p>
+  © <span id="year"></span> BRB Property Solutions
 </footer>
 
+<!-- Sticky mobile call button -->
+<a
+  class="sticky-call"
+  href="tel:01279414457"
+  aria-label="Call BRB Property Solutions"
+  data-track="phone-sticky">
+  <svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z"/>
+  </svg>
+  Call Now
+</a>
+
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
