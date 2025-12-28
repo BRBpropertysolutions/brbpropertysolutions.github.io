@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BRB Property Solutions | Ethical Housing</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="favicon-192.png">
 
   <style>
@@ -62,6 +61,12 @@
       transition: transform 0.2s ease, filter 0.2s ease;
     }
 
+    .cta-link svg {
+      width: 18px;
+      height: 18px;
+      fill: #000;
+    }
+
     .cta-link:hover {
       transform: translateY(-2px);
       filter: brightness(1.1);
@@ -110,23 +115,12 @@
       font-size: 0.95rem;
     }
 
-    /* Highlighted social housing card */
-    .service-card.highlight {
-      background: linear-gradient(
-        145deg,
-        rgba(212,175,55,0.1),
-        rgba(0,0,0,0.85)
-      );
-      border-color: rgba(212,175,55,0.45);
-    }
-
     footer {
       padding: 30px 20px;
       font-size: 0.85rem;
       color: #888;
     }
 
-    /* Sticky mobile call button */
     .sticky-call {
       position: fixed;
       bottom: 16px;
@@ -143,11 +137,17 @@
       z-index: 999;
     }
 
+    .sticky-call svg {
+      width: 18px;
+      height: 18px;
+      fill: #000;
+      margin-right: 6px;
+    }
+
     @media (max-width: 768px) {
       .sticky-call {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
       }
       body {
         padding-bottom: 90px;
@@ -183,7 +183,10 @@
       class="cta-link"
       aria-label="Call BRB Property Solutions"
     >
-      📞 Call Us
+      <svg viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.25 1.01l-2.2 2.19z"/>
+      </svg>
+      Call Us
     </a>
   </div>
 
@@ -198,45 +201,32 @@
   <div class="services-grid">
     <div class="service-card">
       <h3>Purchase of Hard-to-Sell Properties</h3>
-      <p>
-        Fast, flexible purchase solutions for properties struggling on the open market.
-      </p>
+      <p>Fast, flexible purchase solutions for properties struggling on the open market.</p>
     </div>
 
     <div class="service-card">
       <h3>Letting Hard-to-Rent Properties</h3>
-      <p>
-        Solutions for low-demand, problematic, or condition-challenged rental properties.
-      </p>
+      <p>Solutions for low-demand, problematic, or condition-challenged rental properties.</p>
     </div>
 
     <div class="service-card">
       <h3>Rent-to-Rent (Guaranteed Rent)</h3>
-      <p>
-        Hands-off management with consistent rental income and peace of mind.
-      </p>
+      <p>Hands-off management with consistent rental income and peace of mind.</p>
     </div>
 
     <div class="service-card">
       <h3>Lease Option Agreements</h3>
-      <p>
-        Assured purchase after an agreed term — ideal for sellers needing certainty.
-      </p>
+      <p>Assured purchase after an agreed term — ideal for sellers needing certainty.</p>
     </div>
 
     <div class="service-card">
       <h3>BRRR Strategy</h3>
-      <p>
-        Buy, refurbish, refinance, and rent solutions for distressed or vacant properties.
-      </p>
+      <p>Buy, refurbish, refinance, and rent solutions for distressed or vacant properties.</p>
     </div>
 
-    <!-- NEW SOCIAL HOUSING SERVICE -->
-    <div class="service-card highlight">
+    <div class="service-card">
       <h3>Social Housing Specialists</h3>
-      <p>
-        Specialists in social housing providing property solutions for the most vulnerable.
-      </p>
+      <p>Specialists in social housing providing property solutions for the most vulnerable.</p>
     </div>
   </div>
 </section>
@@ -245,9 +235,11 @@
   © 2025 BRB Property Solutions
 </footer>
 
-<!-- Sticky mobile call button -->
 <a href="tel:01279414457" class="sticky-call">
-  📞 Call 01279 414457
+  <svg viewBox="0 0 24 24">
+    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.25 1.01l-2.2 2.19z"/>
+  </svg>
+  Call 01279 414457
 </a>
 
 </body>
