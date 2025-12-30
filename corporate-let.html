@@ -5,65 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Corporate Let & Management | BRB Property Solutions</title>
 
+  <!-- SEO (update YOURDOMAIN.com) -->
+  <meta name="description" content="BRB Property Solutions provides corporate letting and property management with guaranteed rent for landlords. We manage compliance and supply properties to local authorities." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://YOURDOMAIN.com/corporate-let.html" />
+  <meta property="og:title" content="Corporate Let & Management | BRB Property Solutions" />
+  <meta property="og:description" content="A hands-off corporate letting arrangement with guaranteed rent and professional management, supplying properties to local authorities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOURDOMAIN.com/corporate-let.html" />
+
+  <!-- Google tag (gtag.js) - Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-      color: #fff;
-      text-align: center;
-    }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: radial-gradient(circle at top, #1a1a1a, #000); color: #fff; text-align: center; }
+    header { padding: 60px 20px 40px; }
+    h1 { color: #d4af37; margin-bottom: 18px; }
+    .content { max-width: 760px; margin: 0 auto; line-height: 1.7; color: #ddd; font-size: 1.05rem; }
 
-    header {
-      padding: 60px 20px 40px;
-    }
+    ul { list-style: none; padding: 0; margin: 26px 0 18px; text-align: left; }
+    ul li { margin-bottom: 10px; font-size: 1rem; }
 
-    h1 {
-      color: #d4af37;
-      margin-bottom: 20px;
-    }
+    .cta-row { margin-top: 28px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .cta-link { display: inline-flex; align-items: center; justify-content: center; padding: 14px 26px; background: #d4af37; color: #000; font-weight: 800; border-radius: 999px; text-decoration: none; transition: transform 0.2s ease, filter 0.2s ease; }
+    .cta-link:hover { transform: translateY(-2px); filter: brightness(1.1); }
+    .cta-link.secondary { background: transparent; color: #d4af37; border: 1px solid #d4af37; }
 
-    .content {
-      max-width: 760px;
-      margin: 0 auto;
-      line-height: 1.7;
-      color: #ddd;
-      font-size: 1.05rem;
-    }
+    .faq { text-align:left; max-width:760px; margin: 24px auto 0; }
+    .faq-q { width:100%; text-align:left; padding:14px 16px; margin:10px 0 0; background: rgba(0,0,0,0.5); color:#fff; border:1px solid rgba(212,175,55,0.35); border-radius:12px; cursor:pointer; font-weight:800; }
+    .faq-q:hover { border-color: rgba(212,175,55,0.7); }
+    .faq-a { display:none; padding:12px 16px; background: rgba(255,255,255,0.04); border-left: 2px solid #d4af37; border-radius: 0 0 12px 12px; color:#ddd; }
+    .faq-a p { margin: 0; line-height:1.6; }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 30px 0;
-    }
-
-    ul li {
-      margin-bottom: 12px;
-      font-size: 1rem;
-    }
-
-    .cta-row {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .cta-link {
-      padding: 14px 26px;
-      background: #d4af37;
-      color: #000;
-      font-weight: 700;
-      border-radius: 999px;
-      text-decoration: none;
-    }
-
-    .cta-link.secondary {
-      background: transparent;
-      color: #d4af37;
-      border: 1px solid #d4af37;
-    }
+    .back { margin-top: 18px; display: inline-block; color: #d4af37; text-decoration: none; font-weight: 800; }
   </style>
 </head>
 
@@ -78,13 +58,13 @@
       through long-term corporate letting arrangements.
     </p>
 
-    <h2 style="color:#d4af37;">Benefits</h2>
+    <h2 style="color:#d4af37; margin-top:28px; text-align:left;">Benefits</h2>
 
     <ul>
       <li>✔ Guaranteed monthly rent</li>
       <li>✔ No void periods</li>
       <li>✔ No tenant management</li>
-      <li>✔ Maintenance & compliance handled</li>
+      <li>✔ Maintenance &amp; compliance handled</li>
       <li>✔ Long-term agreements (2+ years)</li>
     </ul>
 
@@ -94,17 +74,57 @@
     </p>
 
     <div class="cta-row">
-      <a href="BRB_FINAL_TOP_5_PERCENT_PACK.pdf" class="cta-link">
-        Download Information Pack
-      </a>
+      <a href="BRB_FINAL_TOP_5_PERCENT_PACK.pdf"
+         class="cta-link ga-track"
+         data-ga-event="download_pack"
+         data-ga-label="corporate_let_pack">Download Information Pack</a>
 
       <a href="mailto:info@brbpropertysolutions.com?subject=Corporate%20Let%20Enquiry"
-         class="cta-link secondary">
-        Request a Callback
-      </a>
+         class="cta-link secondary ga-track"
+         data-ga-event="request_callback"
+         data-ga-label="corporate_let_callback">Request a Callback</a>
+    </div>
+
+    <a class="back ga-track" href="index.html" data-ga-event="nav_back" data-ga-label="back_to_home">← Back to Home</a>
+
+    <h2 style="color:#d4af37; margin-top:45px; text-align:left;">Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <button class="faq-q" aria-expanded="false">Is this a corporate let?</button>
+      <div class="faq-a"><p>Yes. BRB Property Solutions acts as the corporate tenant and manages the property as part of a long-term arrangement.</p></div>
+
+      <button class="faq-q" aria-expanded="false">Who is responsible for maintenance and compliance?</button>
+      <div class="faq-a"><p>We handle day-to-day management, maintenance, and any council-required compliance works during the term (as agreed in the contract).</p></div>
+
+      <button class="faq-q" aria-expanded="false">Is rent paid if the property is unoccupied?</button>
+      <div class="faq-a"><p>Yes. Rent is paid as agreed, regardless of occupancy, subject to the terms of the agreement.</p></div>
+
+      <button class="faq-q" aria-expanded="false">How is property condition protected?</button>
+      <div class="faq-a"><p>A schedule of condition is agreed at the start, and the property is returned in the same condition (fair wear and tear excepted).</p></div>
     </div>
   </div>
 </header>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const answer = btn.nextElementSibling;
+      answer.style.display = expanded ? 'none' : 'block';
+    });
+  });
+
+  // GA click tracking
+  document.querySelectorAll('.ga-track').forEach(el => {
+    el.addEventListener('click', () => {
+      const eventName = el.getAttribute('data-ga-event') || 'click';
+      const label = el.getAttribute('data-ga-label') || (el.textContent || '').trim() || 'unknown';
+      if (typeof gtag === 'function') gtag('event', eventName, { event_category: 'engagement', event_label: label });
+    });
+  });
+</script>
 
 </body>
 </html>
