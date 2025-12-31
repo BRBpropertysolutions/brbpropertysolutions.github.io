@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRB Property Solutions | Ethical Housing</title>
+
+  <link rel="icon" href="favicon-192.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 40px;
+    }
+
+    .logo {
+      max-width: 220px;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #d4af37;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+      color: #ddd;
+      font-size: 1.05rem;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 26px;
+      background: #d4af37;
+      color: #000;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .cta-link svg {
+      width: 18px;
+      height: 18px;
+      fill: #000;
+    }
+
+    .cta-link:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+
+    .desktop-tip {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    h2 {
+      color: #d4af37;
+      margin-bottom: 30px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 14px;
+      padding: 22px;
+      text-align: left;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+
+    .service-card h3 {
+      color: #d4af37;
+      margin-top: 0;
+    }
+
+    .service-card p {
+      color: #ddd;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .sticky-call {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      padding: 14px 26px;
+      background: #d4af37;
+      color: #000;
+      font-weight: 800;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      z-index: 999;
+    }
+
+    .sticky-call svg {
+      width: 18px;
+      height: 18px;
+      fill: #000;
+      margin-right: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .sticky-call {
+        display: inline-flex;
+        align-items: center;
+      }
+      body {
+        padding-bottom: 90px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="BRB Property Solutions Logo" class="logo">
+
+  <div class="tagline">
+    Ethical Housing. Professional Property Solutions.
+  </div>
+
+  <p class="intro">
+    Providing responsible, transparent, and effective solutions for property owners,
+    landlords, and investors across the UK.
+  </p>
+
+  <div class="cta-row">
+    <a
+      href="mailto:info@brbpropertysolutions.com?subject=Website%20Enquiry"
+      class="cta-link"
+    >
+      Get a Free Consultation
+    </a>
+
+    <a
+      href="tel:01279414457"
+      class="cta-link"
+      aria-label="Call BRB Property Solutions"
+    >
+      <svg viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.25 1.01l-2.2 2.19z"/>
+      </svg>
+      Call Us
+    </a>
+  </div>
+
+  <div class="desktop-tip">
+    Call: 01279 414457
+  </div>
+</header>
+
+<section>
+  <h2>Our Services</h2>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Purchase of Hard-to-Sell Properties</h3>
+      <p>Fast, flexible purchase solutions for properties struggling on the open market.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Letting Hard-to-Rent Properties</h3>
+      <p>Solutions for low-demand, problematic, or condition-challenged rental properties.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Rent-to-Rent (Guaranteed Rent)</h3>
+      <p>Hands-off management with consistent rental income and peace of mind.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Lease Option Agreements</h3>
+      <p>Assured purchase after an agreed term — ideal for sellers needing certainty.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>BRRR Strategy</h3>
+      <p>Buy, refurbish, refinance, and rent solutions for distressed or vacant properties.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Social Housing Specialists</h3>
+      <p>Specialists in social housing providing property solutions for the most vulnerable.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 BRB Property Solutions
+</footer>
+
+<a href="tel:01279414457" class="sticky-call">
+  <svg viewBox="0 0 24 24">
+    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.59a1 1 0 01-.25 1.01l-2.2 2.19z"/>
+  </svg>
+  Call 01279 414457
+</a>
+
+</body>
+</html>
