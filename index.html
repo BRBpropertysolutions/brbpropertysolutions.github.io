@@ -19,12 +19,12 @@
     header { padding: 60px 20px 40px; }
     .logo { max-width: 220px; margin-bottom: 20px; }
     .tagline { font-size: 1.2rem; color: #d4af37; font-weight: 600; margin-bottom: 18px; }
-    .intro { max-width: 860px; margin: 0 auto 28px; line-height: 1.6; color: #ddd; font-size: 1.05rem; }
+    .intro { max-width: 900px; margin: 0 auto 28px; line-height: 1.6; color: #ddd; font-size: 1.05rem; }
 
     section { padding: 55px 20px; }
     h2 { color: #d4af37; margin-bottom: 22px; }
 
-    .services-grid {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
@@ -32,7 +32,7 @@
       margin: 0 auto;
     }
 
-    .service-card {
+    .card {
       background: rgba(0, 0, 0, 0.7);
       border: 1px solid rgba(212, 175, 55, 0.25);
       border-radius: 14px;
@@ -40,13 +40,13 @@
       text-align: left;
     }
 
-    .service-card h3 { color: #d4af37; margin-top: 0; }
-    .service-card p { color: #ddd; font-size: 0.95rem; line-height: 1.55; }
+    .card h3 { color: #d4af37; margin-top: 0; }
+    .card p { color: #ddd; font-size: 0.95rem; line-height: 1.55; }
 
-    .cta-link {
+    .cta {
       display: inline-block;
-      margin-top: 14px;
-      padding: 12px 22px;
+      margin-top: 16px;
+      padding: 12px 26px;
       background: #d4af37;
       color: #000;
       font-weight: 700;
@@ -55,7 +55,7 @@
       font-size: 0.95rem;
     }
 
-    .compliance-docs ul {
+    .docs ul {
       list-style: none;
       padding: 0;
       max-width: 560px;
@@ -63,15 +63,8 @@
       text-align: left;
     }
 
-    .compliance-docs li {
-      margin: 12px 0;
-    }
-
-    .compliance-docs a {
-      color: #d4af37;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    .docs li { margin: 12px 0; }
+    .docs a { color: #d4af37; text-decoration: none; font-weight: 600; }
 
     .prs-footer {
       margin-top: 40px;
@@ -106,85 +99,75 @@
     Providing responsible, transparent, and compliant property solutions for
     landlords, investors, and local authority partners across the UK.
     <br><br>
-    <strong>We are a registered member of the Property Redress Scheme (PRS)</strong>,
+    <strong>Registered member of the Property Redress Scheme (PRS)</strong>,
     ensuring independent oversight, clear complaints handling, and accountability
-    in line with landlord and local authority expectations.
+    in line with landlord and public-sector procurement expectations.
   </p>
 </header>
 
-<!-- LANDLORD SECTION -->
+<!-- LANDLORDS -->
 <section>
   <h2>For Landlords & Property Owners</h2>
 
-  <div class="services-grid">
-    <div class="service-card">
-      <h3>Guaranteed Rent & Long-Term Stability</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Guaranteed Rent</h3>
       <p>
-        We lease properties directly from landlords, providing consistent monthly
-        income without voids, marketing costs, or day-to-day management.
-        Rent is paid regardless of occupancy.
+        We lease properties directly from landlords, providing predictable
+        monthly income without voids, marketing costs, or arrears risk.
       </p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>Hands-Off Management</h3>
       <p>
-        BRB Property Solutions takes full responsibility for tenant management,
-        inspections, and liaison with local authorities—reducing involvement and
-        stress for landlords.
+        BRB Property Solutions manages tenants, inspections, compliance,
+        and local authority liaison — reducing involvement and stress.
       </p>
     </div>
 
-    <div class="service-card">
+    <div class="card">
       <h3>Professional & Compliant Use</h3>
       <p>
-        Properties are used in line with agreed standards and supplied to
-        local authorities for temporary or emergency accommodation,
-        with safeguarding and compliance embedded throughout.
+        Properties are supplied to local authorities for temporary or
+        emergency accommodation, with safeguarding and governance embedded.
       </p>
     </div>
 
-    <div class="service-card">
-      <h3>Suitable Property Types</h3>
+    <div class="card">
+      <h3>Long-Term Stability</h3>
       <p>
-        We work with landlords who own houses and flats suitable for
-        long-term leasing, including properties that may be challenging
-        to manage through traditional letting routes.
+        Suitable for landlords seeking secure, long-term agreements
+        rather than short-term letting cycles.
       </p>
     </div>
   </div>
 
-  <p style="max-width:720px;margin:28px auto 0;color:#ccc;">
-    If you are a landlord seeking a reliable, professional counterparty and a
-    long-term solution for your property, we welcome confidential discussions.
-  </p>
-
-  <a href="mailto:info@brbpropertysolutions.com?subject=Landlord%20Enquiry" class="cta-link">
-    Landlord Enquiries
-  </a>
+  <a href="for-landlords.html" class="cta">Landlord Information</a>
+  <a href="landlord-faq.html" class="cta" style="margin-left:10px;">Landlord FAQ</a>
 </section>
 
-<!-- LOCAL AUTHORITY SECTION -->
+<!-- LOCAL AUTHORITIES -->
 <section>
   <h2>For Local Authorities</h2>
 
   <p class="intro">
-    We work in partnership with local authorities to provide professionally
+    We work in partnership with local authorities to deliver professionally
     managed, compliant accommodation for temporary, emergency, and supported
     housing requirements.
   </p>
 
-  <a href="for-local-authorities.html" class="cta-link">
+  <a href="for-local-authorities.html" class="cta">
     Local Authority Information
   </a>
 </section>
 
-<!-- COMPLIANCE -->
-<section class="compliance-docs">
+<!-- GOVERNANCE -->
+<section class="docs">
   <h2>Governance, Compliance & Safeguarding</h2>
 
   <p>
-    The following documentation is available to landlords, local authority partners,
+    The following documentation is available to landlords,
     housing teams, and procurement officers:
   </p>
 
@@ -198,6 +181,7 @@
   </ul>
 </section>
 
+<!-- PRS -->
 <div class="prs-footer">
   <a href="https://www.theprs.co.uk" target="_blank" rel="noopener">
     <img src="PRS_Logo.jpg" alt="Property Redress Scheme Member Logo">
@@ -209,10 +193,10 @@
 
 <footer>
   <p>
+    <a href="for-landlords.html">Landlords</a> |
     <a href="for-local-authorities.html">Local Authorities</a> |
     <a href="safeguarding-policy.html">Safeguarding</a> |
-    <a href="complaints-procedure.html">Complaints</a> |
-    <a href="property-compliance.html">Compliance</a>
+    <a href="complaints-procedure.html">Complaints</a>
   </p>
   © 2025 BRB Property Solutions
 </footer>
