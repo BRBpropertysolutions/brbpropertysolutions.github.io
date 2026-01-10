@@ -3,223 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BRB Property Solutions | Housing Solutions for Local Authorities</title>
+  <title>BRB Property Solutions | Ethical Housing & Local Authority Supply</title>
 
-  <meta name="description" content="BRB Property Solutions provides compliant temporary and emergency accommodation for local authorities, delivered with professional management, safeguarding awareness, and transparent governance.">
+  <link rel="icon" href="favicon-192.png">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: radial-gradient(circle at top, #1a1a1a, #000);
-      color: #ffffff;
+      color: #fff;
       text-align: center;
     }
 
-    header {
-      padding: 80px 20px 60px;
+    header { padding: 60px 20px 40px; }
+    .logo { max-width: 220px; margin-bottom: 20px; }
+    .tagline { font-size: 1.2rem; color: #d4af37; font-weight: 600; margin-bottom: 18px; }
+    .intro { max-width: 820px; margin: 0 auto 28px; line-height: 1.6; color: #ddd; font-size: 1.05rem; }
+
+    section { padding: 50px 20px; }
+    h2 { color: #d4af37; margin-bottom: 22px; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    section {
-      padding: 60px 20px;
+    .service-card {
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 14px;
+      padding: 22px;
+      text-align: left;
     }
 
-    h1, h2, h3 {
-      color: #d4af37;
-    }
+    .service-card h3 { color: #d4af37; margin-top: 0; }
+    .service-card p { color: #ddd; font-size: 0.95rem; line-height: 1.5; }
 
-    p {
-      color: #dddddd;
-      line-height: 1.65;
-      max-width: 900px;
-      margin: 0 auto 20px;
-    }
-
-    .button {
+    .cta-link {
       display: inline-block;
-      padding: 14px 28px;
-      margin-top: 15px;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #d4af37, #b8962e);
+      margin-top: 12px;
+      padding: 12px 22px;
+      background: #d4af37;
       color: #000;
-      font-weight: bold;
+      font-weight: 700;
+      border-radius: 999px;
       text-decoration: none;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      max-width: 1100px;
+    .compliance-docs ul {
+      list-style: none;
+      padding: 0;
+      max-width: 520px;
       margin: 0 auto;
       text-align: left;
     }
 
-    .card {
-      background: rgba(0,0,0,0.7);
-      border: 1px solid rgba(212,175,55,0.25);
-      border-radius: 16px;
-      padding: 24px;
+    .compliance-docs li {
+      margin: 12px 0;
     }
 
-    .logo-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
-      margin-top: 30px;
+    .compliance-docs a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 600;
     }
 
-    .logo-row img {
-      max-height: 70px;
-      background: #fff;
-      padding: 12px;
-      border-radius: 10px;
+    .prs-footer {
+      margin-top: 40px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .prs-footer img {
+      max-width: 140px;
+      display: block;
+      margin: 0 auto;
     }
 
     footer {
-      padding: 40px 20px;
+      padding: 25px 20px;
       font-size: 0.85rem;
-      color: #999;
+      color: #888;
     }
 
-    footer a {
-      color: #d4af37;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+    footer a { color: #888; text-decoration: none; margin: 0 6px; }
   </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <header>
-  <h1>Professional Housing Solutions for Local Authorities</h1>
-  <p>
-    BRB Property Solutions partners with local authorities to deliver
-    professionally managed temporary and emergency accommodation,
-    aligned with statutory duties, safeguarding expectations, and
-    governance requirements.
+  <img src="logo.png" alt="BRB Property Solutions Logo" class="logo">
+
+  <div class="tagline">Ethical Housing. Professional Property Solutions.</div>
+
+  <p class="intro">
+    Providing responsible, transparent, and compliant housing solutions for
+    property owners, landlords, investors, and local authority partners across the UK.
+    <br><br>
+    <strong>We are a registered member of the Property Redress Scheme (PRS)</strong>,
+    ensuring independent oversight, clear complaints handling, and accountability
+    in line with local authority procurement expectations.
   </p>
-  <a href="for-local-authorities.html" class="button">For Local Authorities</a>
 </header>
 
-<!-- SERVICES -->
 <section>
   <h2>Our Services</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Temporary & Emergency Accommodation</h3>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Corporate Let & Local Authority Supply</h3>
       <p>
-        High-quality accommodation sourced and managed to meet short-term,
-        emergency, and prevention housing needs in line with local authority
-        placement frameworks.
+        Guaranteed rent solutions with professional management.
+        Properties are supplied to local authorities for temporary,
+        emergency, and supported accommodation in line with compliance standards.
+      </p>
+      <a href="for-local-authorities.html" class="cta-link">For Local Authorities</a>
+    </div>
+
+    <div class="service-card">
+      <h3>Direct Property Purchase</h3>
+      <p>
+        A fast, certain sale option for property owners seeking a clean exit
+        without open-market delays.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Corporate Leasing</h3>
+    <div class="service-card">
+      <h3>Letting Support for Challenging Assets</h3>
       <p>
-        Secure leasing arrangements that provide cost certainty,
-        reduced voids, and professionally managed properties for council use.
+        Practical solutions for properties that are difficult to let due to
+        condition, demand, or management complexity.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Property Management & Compliance</h3>
+    <div class="service-card">
+      <h3>Lease Options & Long-Term Agreements</h3>
       <p>
-        Ongoing inspections, maintenance coordination, compliance oversight,
-        and responsive issue resolution to support council standards.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- LOCAL AUTHORITY TRUST -->
-<section>
-  <h2>Working With Local Authorities</h2>
-  <p>
-    We understand the pressures faced by housing teams and procurement
-    departments. Our delivery model is designed to support transparency,
-    accountability, and consistent standards across all placements.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Governance & Oversight</h3>
-      <p>
-        Clear operational processes, documented procedures, and cooperative
-        engagement with local authority officers and auditors.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Safeguarding Awareness</h3>
-      <p>
-        We operate with safeguarding awareness recognising the vulnerabilities
-        associated with temporary accommodation and work closely with council
-        safeguarding pathways.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Ethical & Responsible Delivery</h3>
-      <p>
-        Our approach prioritises resident wellbeing, property standards, and
-        responsible management in line with public sector expectations.
+        Structured agreements providing defined outcomes,
+        flexibility, and long-term security.
       </p>
     </div>
   </div>
 </section>
 
-<!-- COMPLIANCE -->
-<section>
-  <h2>Compliance & Accreditations</h2>
+<section class="compliance-docs">
+  <h2>Governance, Compliance & Safeguarding</h2>
+
   <p>
-    We are committed to operating within regulatory requirements and recognised
-    industry frameworks to provide assurance to our public sector partners.
+    The following documentation is available to local authority partners,
+    housing teams, and procurement officers as part of our governance framework:
   </p>
 
-  <div class="logo-row">
-    <!-- Make sure this file exists exactly as named -->
-    <a href="https://www.theprs.co.uk/" target="_blank" rel="noopener">
-      <img src="PRS_Logo.jpg" alt="Property Redress Scheme Member">
-    </a>
-  </div>
-
-  <p style="margin-top:25px;">
-    ✔ Member of the Property Redress Scheme (PRS)<br>
-    ✔ Independent complaints resolution<br>
-    ✔ Transparent governance and accountability
-  </p>
+  <ul>
+    <li><a href="safeguarding-policy.html">Safeguarding Policy</a></li>
+    <li><a href="complaints-procedure.html">Complaints & Redress Procedure</a></li>
+    <li><a href="property-compliance.html">Property Compliance Information</a></li>
+    <li><a href="management-inspection.html">Management & Inspection Processes</a></li>
+    <li><a href="equality-diversity.html">Equality, Diversity & Inclusion Statement</a></li>
+    <li><a href="health-safety.html">Health & Safety Statement</a></li>
+  </ul>
 </section>
 
-<!-- POLICIES -->
-<section>
-  <h2>Policies & Documentation</h2>
-  <p>
-    The following documents are available for local authority due diligence
-    and procurement processes:
+<div class="prs-footer">
+  <a href="https://www.theprs.co.uk" target="_blank" rel="noopener">
+    <img src="PRS_Logo.jpg" alt="Property Redress Scheme Member Logo">
+  </a>
+  <p style="font-size:0.8rem;color:#888;margin-top:6px;">
+    Independent redress provided by the Property Redress Scheme
   </p>
-
-  <p>
-    <a href="safeguarding-policy.html" class="button">Safeguarding Policy</a>
-  </p>
-
-  <p style="margin-top:20px;">
-    Additional documentation including complaints procedures and compliance
-    information can be provided upon request.
-  </p>
-</section>
+</div>
 
 <footer>
-  © 2025 BRB Property Solutions  
-  <br><br>
-  <a href="for-local-authorities.html">For Local Authorities</a> |
-  <a href="safeguarding-policy.html">Safeguarding Policy</a>
+  <p>
+    <a href="for-local-authorities.html">For Local Authorities</a> |
+    <a href="safeguarding-policy.html">Safeguarding</a> |
+    <a href="complaints-procedure.html">Complaints</a> |
+    <a href="property-compliance.html">Compliance</a>
+  </p>
+  © 2025 BRB Property Solutions
 </footer>
 
 </body>
