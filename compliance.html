@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compliance | BRB Property Solutions</title>
+
+  <link rel="icon" href="favicon-192.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color: #fff;
+      text-align: center;
+    }
+
+    header { padding: 50px 20px 20px; }
+    .logo { max-width: 200px; margin-bottom: 18px; }
+    h1 { color: #d4af37; margin: 10px 0 10px; }
+    .sub { max-width: 900px; margin: 0 auto 18px; color: #ddd; line-height: 1.6; }
+
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 18px 40px; text-align: left; }
+
+    .panel {
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 18px 0;
+    }
+
+    .panel h2 {
+      color: #d4af37;
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+    }
+
+    .meta {
+      color: #ddd;
+      line-height: 1.6;
+      font-size: 0.98rem;
+      margin: 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      background: #d4af37;
+      color: #000;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #d4af37;
+      border: 1px solid rgba(212,175,55,0.55);
+    }
+
+    .badges {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .badge-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      border: 1px solid rgba(212,175,55,0.25);
+      background: rgba(0,0,0,0.55);
+      padding: 10px 12px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .badge-link img { display: block; opacity: 0.92; width: auto; height: auto; }
+    .badge-link.ico img { max-height: 52px; }
+    .badge-link.llas img { max-height: 64px; }
+
+    /* subtle auditor tooltip */
+    .badge-link[data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 10px);
+      transform: translateX(-50%);
+      width: min(560px, calc(100vw - 40px));
+      background: rgba(0,0,0,0.92);
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: #ddd;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 160ms ease;
+      z-index: 30;
+    }
+
+    .badge-link[data-tooltip]::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 3px);
+      transform: translateX(-50%);
+      border: 7px solid transparent;
+      border-top-color: rgba(212,175,55,0.35);
+      opacity: 0;
+      transition: opacity 160ms ease;
+      z-index: 31;
+    }
+
+    .badge-link:hover::after,
+    .badge-link:hover::before { opacity: 1; }
+
+    .muted {
+      color: #888;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 22px 20px;
+      font-size: 0.85rem;
+      color: #888;
+      text-align: center;
+    }
+
+    footer a { color: #888; text-decoration: none; margin: 0 6px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="BRB Property Solutions Logo" class="logo" />
+    <h1>Compliance</h1>
+    <p class="sub">
+      Our governance and compliance approach is designed to support landlords, local authorities,
+      and procurement teams with transparent documentation and verifiable accreditation.
+    </p>
+  </header>
+
+  <main class="wrap">
+
+    <div class="panel">
+      <h2>Accreditation & Verification</h2>
+
+      <div class="badges">
+        <a
+          class="badge-link ico"
+          href="https://ico.org.uk/esdwebpages/search"
+          target="_blank"
+          rel="noopener"
+          data-tooltip="ICO Register verification: search by reference ZC083608 to view BRB PROPERTY SOLUTIONS LTD registration details and expiry."
+          aria-label="Verify ICO registration (opens in new tab)"
+        >
+          <img src="ico-logo.png" alt="ICO Registered" />
+        </a>
+
+        <a
+          class="badge-link llas"
+          href="https://www.londonlandlords.org.uk/search/accredited/"
+          target="_blank"
+          rel="noopener"
+          data-tooltip="LLAS verification: search by accreditation number 26041450 to confirm accreditation status and expiry."
+          aria-label="Verify LLAS accreditation (opens in new tab)"
+        >
+          <img src="llas-logo.png" alt="LLAS Accredited" />
+        </a>
+      </div>
+
+      <p class="muted">
+        For auditors: hover over each badge for search guidance and reference numbers.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>ICO Data Protection Registration</h2>
+      <p class="meta">
+        <strong>Organisation:</strong> BRB Property Solutions Ltd<br>
+        <strong>Registration reference:</strong> ZC083608<br>
+        <strong>Date registered:</strong> 24 January 2026<br>
+        <strong>Registration expires:</strong> 23 January 2027
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="https://ico.org.uk/esdwebpages/search" target="_blank" rel="noopener">
+          Verify on ICO Register
+        </a>
+        <a class="btn secondary" href="certificates/ico-registration-certificate.pdf">
+          View Certificate (PDF)
+        </a>
+      </div>
+
+      <p class="muted">
+        Tip: search by reference number only for the quickest match.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>LLAS Accreditation</h2>
+      <p class="meta">
+        <strong>Accreditation number:</strong> 26041450<br>
+        <strong>Expiry:</strong> January 2028
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="https://www.londonlandlords.org.uk/search/accredited/" target="_blank" rel="noopener">
+          Verify on LLAS Register
+        </a>
+        <a class="btn secondary" href="certificates/llas-certificate.pdf">
+          View Certificate (PDF)
+        </a>
+      </div>
+
+      <p class="muted">
+        Tip: use one search field only (e.g., accreditation number).
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>Property Redress Scheme (PRS)</h2>
+      <p class="meta">
+        We are a registered member of the Property Redress Scheme (PRS), supporting independent redress and
+        clear complaints handling.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="https://www.theprs.co.uk" target="_blank" rel="noopener">Visit PRS</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Policies & Governance Documents</h2>
+      <p class="meta">
+        The following documents are available:
+      </p>
+      <p class="meta">
+        • <a href="safeguarding-policy.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Safeguarding Policy</a><br>
+        • <a href="complaints-procedure.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Complaints & Redress Procedure</a><br>
+        • <a href="property-compliance.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Property Compliance Information</a><br>
+        • <a href="management-inspection.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Management & Inspection Processes</a><br>
+        • <a href="equality-diversity.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Equality, Diversity & Inclusion</a><br>
+        • <a href="health-safety.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Health & Safety</a>
+      </p>
+
+      <p class="muted">
+        (Procurement teams: if you need additional evidence packs, we can provide them on request.)
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="for-landlords.html">Landlords</a> |
+      <a href="for-local-authorities.html">Local Authorities</a> |
+      <a href="compliance.html">Compliance</a>
+    </p>
+    © 2025 BRB Property Solutions
+  </footer>
+</body>
+</html>
