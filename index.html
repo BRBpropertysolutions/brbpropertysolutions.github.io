@@ -84,7 +84,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 40px;
+      gap: 24px;
       flex-wrap: wrap;
       margin-bottom: 14px;
     }
@@ -115,6 +115,7 @@
     /* Visual balance */
     .compliance-link.ico img { max-height: 52px; }
     .compliance-link.llas img { max-height: 64px; }
+    .compliance-link.prs img { max-height: 50px; } /* PRS tends to be compact */
 
     /* Subtle auditor tooltip */
     .compliance-link[data-tooltip]::after {
@@ -123,7 +124,7 @@
       left: 50%;
       bottom: calc(100% + 10px);
       transform: translateX(-50%);
-      width: min(520px, calc(100vw - 40px));
+      width: min(560px, calc(100vw - 40px));
       background: rgba(0,0,0,0.92);
       border: 1px solid rgba(212,175,55,0.35);
       border-radius: 12px;
@@ -135,7 +136,7 @@
       pointer-events: none;
       transition: opacity 160ms ease;
       text-align: left;
-      z-index: 20;
+      z-index: 30;
     }
 
     .compliance-link[data-tooltip]::before {
@@ -148,7 +149,7 @@
       border-top-color: rgba(212,175,55,0.35);
       opacity: 0;
       transition: opacity 160ms ease;
-      z-index: 21;
+      z-index: 31;
     }
 
     .compliance-link:hover::after,
@@ -160,22 +161,10 @@
       font-size: 0.85rem;
       color: #888;
       margin-top: 6px;
-      max-width: 820px;
+      max-width: 860px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.5;
-    }
-
-    .prs-footer {
-      margin-top: 40px;
-      padding-bottom: 20px;
-      text-align: center;
-    }
-
-    .prs-footer img {
-      max-width: 140px;
-      display: block;
-      margin: 0 auto;
     }
 
     footer {
@@ -281,7 +270,7 @@
   </ul>
 </section>
 
-<!-- ICO & LLAS (linked + tooltips) -->
+<!-- ICO + LLAS + PRS (linked + tooltips) -->
 <section class="compliance">
   <p class="compliance-title">Accreditation & Data Protection</p>
 
@@ -302,27 +291,29 @@
       href="https://www.londonlandlords.org.uk/search/accredited/"
       target="_blank"
       rel="noopener"
-      data-tooltip="LLAS Accreditation: Number 26041450 • Expiry Jan 2028. Click to search on the LLAS accredited landlord/company register."
+      data-tooltip="LLAS Accreditation: Number 26041450 • Expiry Jan 2028. Click to verify via the LLAS accredited landlord/company search."
       aria-label="Verify LLAS accreditation on the LLAS register (opens in new tab)"
     >
       <img src="llas-logo.png" alt="London Landlord Accreditation Scheme (LLAS)">
     </a>
+
+    <a
+      class="compliance-link prs"
+      href="certificates/prs-certificate.pdf"
+      target="_blank"
+      rel="noopener"
+      data-tooltip="Property Redress Scheme (PRS): Membership certificate available for audit and procurement evidence. Click to open the PRS certificate PDF."
+      aria-label="Open PRS certificate PDF (opens in new tab)"
+    >
+      <img src="PRS_Logo.jpg" alt="Property Redress Scheme (PRS)">
+    </a>
   </div>
 
   <p class="compliance-note">
-    See full details on our <a href="compliance.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Compliance</a> page.
+    See full details and certificates on our
+    <a href="compliance.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Compliance</a> page.
   </p>
 </section>
-
-<!-- PRS -->
-<div class="prs-footer">
-  <a href="https://www.theprs.co.uk" target="_blank" rel="noopener">
-    <img src="PRS_Logo.jpg" alt="Property Redress Scheme Member Logo">
-  </a>
-  <p style="font-size:0.8rem;color:#888;margin-top:6px;">
-    Independent redress provided by the Property Redress Scheme
-  </p>
-</div>
 
 <footer>
   <p>
