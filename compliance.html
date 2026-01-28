@@ -91,6 +91,7 @@
     .badge-link img { display: block; opacity: 0.92; width: auto; height: auto; }
     .badge-link.ico img { max-height: 52px; }
     .badge-link.llas img { max-height: 64px; }
+    .badge-link.prs img { max-height: 50px; }
 
     /* subtle auditor tooltip */
     .badge-link[data-tooltip]::after {
@@ -111,6 +112,7 @@
       pointer-events: none;
       transition: opacity 160ms ease;
       z-index: 30;
+      text-align: left;
     }
 
     .badge-link[data-tooltip]::before {
@@ -184,10 +186,21 @@
         >
           <img src="llas-logo.png" alt="LLAS Accredited" />
         </a>
+
+        <a
+          class="badge-link prs"
+          href="certificates/prs-certificate.pdf"
+          target="_blank"
+          rel="noopener"
+          data-tooltip="PRS evidence: membership certificate available for audit and procurement. Click to open the PRS certificate PDF."
+          aria-label="Open PRS certificate PDF (opens in new tab)"
+        >
+          <img src="PRS_Logo.jpg" alt="Property Redress Scheme (PRS)" />
+        </a>
       </div>
 
       <p class="muted">
-        For auditors: hover over each badge for search guidance and reference numbers.
+        For auditors: hover over each badge for search guidance and evidence references.
       </p>
     </div>
 
@@ -208,10 +221,6 @@
           View Certificate (PDF)
         </a>
       </div>
-
-      <p class="muted">
-        Tip: search by reference number only for the quickest match.
-      </p>
     </div>
 
     <div class="panel">
@@ -229,10 +238,6 @@
           View Certificate (PDF)
         </a>
       </div>
-
-      <p class="muted">
-        Tip: use one search field only (e.g., accreditation number).
-      </p>
     </div>
 
     <div class="panel">
@@ -243,8 +248,17 @@
       </p>
 
       <div class="actions">
-        <a class="btn" href="https://www.theprs.co.uk" target="_blank" rel="noopener">Visit PRS</a>
+        <a class="btn" href="https://www.theprs.co.uk" target="_blank" rel="noopener">
+          Visit PRS
+        </a>
+        <a class="btn secondary" href="certificates/prs-certificate.pdf">
+          View Certificate (PDF)
+        </a>
       </div>
+
+      <p class="muted">
+        Procurement note: the PRS membership certificate is provided as supporting evidence.
+      </p>
     </div>
 
     <div class="panel">
@@ -259,10 +273,6 @@
         • <a href="management-inspection.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Management & Inspection Processes</a><br>
         • <a href="equality-diversity.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Equality, Diversity & Inclusion</a><br>
         • <a href="health-safety.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Health & Safety</a>
-      </p>
-
-      <p class="muted">
-        (Procurement teams: if you need additional evidence packs, we can provide them on request.)
       </p>
     </div>
 
