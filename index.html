@@ -66,6 +66,106 @@
     .docs li { margin: 12px 0; }
     .docs a { color: #d4af37; text-decoration: none; font-weight: 600; }
 
+    /* COMPLIANCE */
+    .compliance {
+      padding: 40px 20px 10px;
+      text-align: center;
+    }
+
+    .compliance-title {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 18px;
+    }
+
+    .compliance-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .compliance-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(0, 0, 0, 0.55);
+      padding: 12px 14px;
+      position: relative;
+    }
+
+    .compliance-link:hover {
+      border-color: rgba(212, 175, 55, 0.55);
+    }
+
+    .compliance-link img {
+      width: auto;
+      height: auto;
+      opacity: 0.92;
+      display: block;
+    }
+
+    /* Visual balance */
+    .compliance-link.ico img { max-height: 52px; }
+    .compliance-link.llas img { max-height: 64px; }
+
+    /* Subtle auditor tooltip */
+    .compliance-link[data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 10px);
+      transform: translateX(-50%);
+      width: min(520px, calc(100vw - 40px));
+      background: rgba(0,0,0,0.92);
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: #ddd;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 160ms ease;
+      text-align: left;
+      z-index: 20;
+    }
+
+    .compliance-link[data-tooltip]::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 3px);
+      transform: translateX(-50%);
+      border: 7px solid transparent;
+      border-top-color: rgba(212,175,55,0.35);
+      opacity: 0;
+      transition: opacity 160ms ease;
+      z-index: 21;
+    }
+
+    .compliance-link:hover::after,
+    .compliance-link:hover::before {
+      opacity: 1;
+    }
+
+    .compliance-note {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 6px;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
     .prs-footer {
       margin-top: 40px;
       padding-bottom: 20px;
@@ -181,6 +281,39 @@
   </ul>
 </section>
 
+<!-- ICO & LLAS (linked + tooltips) -->
+<section class="compliance">
+  <p class="compliance-title">Accreditation & Data Protection</p>
+
+  <div class="compliance-logos">
+    <a
+      class="compliance-link ico"
+      href="https://ico.org.uk/esdwebpages/search"
+      target="_blank"
+      rel="noopener"
+      data-tooltip="ICO Data Protection Register: Reference ZC083608 • Registered 24 Jan 2026 • Expires 23 Jan 2027. Click to verify on the ICO public register."
+      aria-label="Verify ICO registration on the ICO register (opens in new tab)"
+    >
+      <img src="ico-logo.png" alt="ICO Registered">
+    </a>
+
+    <a
+      class="compliance-link llas"
+      href="https://www.londonlandlords.org.uk/search/accredited/"
+      target="_blank"
+      rel="noopener"
+      data-tooltip="LLAS Accreditation: Number 26041450 • Expiry Jan 2028. Click to search on the LLAS accredited landlord/company register."
+      aria-label="Verify LLAS accreditation on the LLAS register (opens in new tab)"
+    >
+      <img src="llas-logo.png" alt="London Landlord Accreditation Scheme (LLAS)">
+    </a>
+  </div>
+
+  <p class="compliance-note">
+    See full details on our <a href="compliance.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Compliance</a> page.
+  </p>
+</section>
+
 <!-- PRS -->
 <div class="prs-footer">
   <a href="https://www.theprs.co.uk" target="_blank" rel="noopener">
@@ -196,7 +329,8 @@
     <a href="for-landlords.html">Landlords</a> |
     <a href="for-local-authorities.html">Local Authorities</a> |
     <a href="safeguarding-policy.html">Safeguarding</a> |
-    <a href="complaints-procedure.html">Complaints</a>
+    <a href="complaints-procedure.html">Complaints</a> |
+    <a href="compliance.html">Compliance</a>
   </p>
   © 2025 BRB Property Solutions
 </footer>
