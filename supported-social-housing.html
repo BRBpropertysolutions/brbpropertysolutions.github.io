@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Supported Social Housing | Guaranteed Rent | BRB Property Solutions</title>
+
+  <!-- SEO -->
+  <title>Guaranteed Rent Supported Housing | Long-Term Leases | BRB Property Solutions</title>
+  <meta name="description" content="Guaranteed rent supported housing leasing for landlords. Long-term leases, full management, property condition protection, and hands-off income." />
+  <meta name="keywords" content="guaranteed rent supported housing, supported housing leasing, long term lease guaranteed rent, hands off landlord income, ethical housing leasing" />
 
   <link rel="icon" href="favicon-192.png">
 
@@ -41,7 +45,7 @@
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0,0,0,0.7);
       border: 1px solid rgba(212,175,55,0.25);
       border-radius: 14px;
       padding: 24px;
@@ -62,22 +66,39 @@
       font-size: 0.95rem;
     }
 
-    .faq {
-      max-width: 900px;
-      margin: 0 auto;
+    /* FORM */
+    form {
+      max-width: 520px;
+      margin: 30px auto 0;
       text-align: left;
     }
 
-    .faq h3 {
-      color: #d4af37;
+    label {
+      display: block;
       margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: #ccc;
     }
 
-    .faq p {
-      color: #ddd;
-      margin-bottom: 20px;
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(212,175,55,0.3);
+      background: #111;
+      color: #fff;
       font-size: 0.95rem;
-      line-height: 1.55;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #d4af37;
+      border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
     }
 
     footer {
@@ -98,99 +119,60 @@
 
 <header>
   <img src="logo.png" alt="BRB Property Solutions Logo" class="logo">
-  <h1>Supported Social Housing</h1>
+  <h1>Guaranteed Rent – Supported Social Housing</h1>
 
   <p class="intro">
-    We offer landlords a secure, long-term leasing model into supported social housing,
-    providing <strong>guaranteed rent</strong>, <strong>full management</strong>, and
-    <strong>property condition protection</strong>.
-    <br><br>
-    This is a truly hands-off solution designed for landlords seeking stability,
-    compliance, and ethical use of their assets.
+    We provide landlords with a secure, long-term leasing solution into supported
+    social housing, offering <strong>guaranteed rent</strong>, <strong>full management</strong>,
+    and <strong>property condition protection</strong>.
   </p>
 </header>
 
 <section>
-  <h2>Our Offer to Landlords</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Guaranteed Rent</h3>
-      <p>Rent paid for the full lease term, regardless of occupancy or voids.</p>
-    </div>
-
-    <div class="card">
-      <h3>Long-Term Leases</h3>
-      <p>Extended lease arrangements provide predictable income and reduce churn.</p>
-    </div>
-
-    <div class="card">
-      <h3>Full Property Management</h3>
-      <p>All management, inspections, repairs coordination, and compliance handled.</p>
-    </div>
-
-    <div class="card">
-      <h3>Condition Protection</h3>
-      <p>Properties are monitored and returned in agreed condition at lease end.</p>
-    </div>
-
-    <div class="card">
-      <h3>Hands-Off Income</h3>
-      <p>No tenant contact, no day-to-day involvement, no operational burden.</p>
-    </div>
-
-    <div class="card">
-      <h3>Ethical Use</h3>
-      <p>Homes support vulnerable individuals through regulated supported housing pathways.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Frequently Asked Questions</h2>
-
-  <div class="faq">
-    <h3>Who is responsible for the property day-to-day?</h3>
-    <p>
-      BRB Property Solutions acts as the single point of responsibility,
-      managing the property and liaising with housing partners.
-    </p>
-
-    <h3>Is rent paid if the property is empty?</h3>
-    <p>
-      Yes. Rent is guaranteed for the duration of the lease, regardless of occupancy.
-    </p>
-
-    <h3>What happens at the end of the lease?</h3>
-    <p>
-      The property is returned in an agreed condition, subject to the terms set out at the start of the lease.
-    </p>
-
-    <h3>What type of properties are suitable?</h3>
-    <p>
-      Typically self-contained homes with strong condition and compliance potential.
-      We will confirm suitability after a quick review.
-    </p>
-
-    <h3>Is this compatible with lender or insurance requirements?</h3>
-    <p>
-      We encourage landlords to confirm any lender and insurance requirements before entering into an agreement.
-      We provide clear documentation to support that process.
-    </p>
-  </div>
-
-  <a href="for-landlords.html" class="cta">Discuss Your Property</a>
-</section>
-
-<section>
-  <h2>Governance & Compliance</h2>
-
+  <h2>Download the Information Pack</h2>
   <p class="intro">
-    Our supported housing operations align with safeguarding, compliance, and data protection expectations
-    required by local authorities and procurement teams.
+    A concise overview of our supported housing leasing model,
+    including landlord protections and governance.
   </p>
 
-  <a href="compliance.html" class="cta">View Compliance</a>
+  <a href="supported-social-housing-info-pack.html" class="cta">
+    Download Information Pack
+  </a>
+</section>
+
+<section>
+  <h2>Discuss Your Property</h2>
+
+  <!-- Netlify-compatible + works as mailto fallback -->
+  <form
+    action="https://formsubmit.co/your@email.com"
+    method="POST"
+  >
+    <input type="hidden" name="_subject" value="Supported Social Housing Enquiry">
+    <input type="hidden" name="_template" value="table">
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Property Location & Details</label>
+    <textarea name="details" rows="4" required></textarea>
+
+    <button type="submit">Submit Enquiry</button>
+  </form>
+</section>
+
+<section>
+  <h2>Local Authority & Council Partners</h2>
+  <p class="intro">
+    We also provide a council-facing overview of our supported housing delivery model.
+  </p>
+
+  <a href="supported-social-housing-councils.html" class="cta">
+    Council & Housing Team Information
+  </a>
 </section>
 
 <footer>
@@ -198,7 +180,6 @@
     <a href="index.html">Home</a> |
     <a href="for-landlords.html">Landlords</a> |
     <a href="supported-social-housing.html">Supported Housing</a> |
-    <a href="for-local-authorities.html">Local Authorities</a> |
     <a href="compliance.html">Compliance</a>
   </p>
   © 2025 BRB Property Solutions
