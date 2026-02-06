@@ -6,8 +6,8 @@
 
   <!-- SEO -->
   <title>Guaranteed Rent Supported Housing | Institutional Leasing | BRB Property Solutions</title>
-  <meta name="description" content="Institutional supported housing leasing with guaranteed rent, long-term leases, full management, and asset condition protection. Designed for portfolio and professional landlords." />
-  <meta name="keywords" content="guaranteed rent supported housing, institutional landlord leasing, long term guaranteed rent, hands off property income, supported housing portfolio" />
+  <meta name="description" content="Guaranteed rent supported housing leasing for professional and institutional landlords. Long-term leases, full management, and asset condition protection with ethical housing partnerships." />
+  <meta name="keywords" content="guaranteed rent supported housing, supported housing leasing, institutional landlords, long term lease guaranteed rent, hands off landlord income" />
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -29,6 +29,8 @@
   <link rel="icon" href="favicon-192.png">
 
   <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -37,72 +39,123 @@
       text-align: center;
     }
 
-    header { padding: 60px 20px 40px; }
+    header { padding: 70px 20px 50px; }
     .logo { max-width: 200px; margin-bottom: 18px; }
     h1, h2 { color: #d4af37; }
+    h1 { margin: 10px 0 14px; }
+
+    section { padding: 70px 20px; }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
 
     .intro {
       max-width: 960px;
-      margin: 0 auto 36px;
+      margin: 0 auto;
       line-height: 1.7;
       color: #ddd;
       font-size: 1.05rem;
     }
 
-    section { padding: 55px 20px; }
+    .section-soft {
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid rgba(212,175,55,0.12);
+      border-bottom: 1px solid rgba(212,175,55,0.12);
+    }
 
+    /* Symmetrical benefits grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      max-width: 1150px;
-      margin: 0 auto;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 28px;
       text-align: left;
+    }
+
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
     }
 
     .card {
-      background: rgba(0,0,0,0.7);
-      border: 1px solid rgba(212,175,55,0.25);
+      background: rgba(0,0,0,0.60);
+      border: 1px solid rgba(212,175,55,0.22);
       border-radius: 14px;
-      padding: 24px;
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 220px;
+      min-width: 0;
     }
 
-    .card h3 { color: #d4af37; margin-top: 0; }
-    .card p { color: #ddd; font-size: 0.95rem; line-height: 1.55; }
+    .card h3 {
+      color: #d4af37;
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+      letter-spacing: 0.2px;
+    }
+
+    .card p {
+      color: #d0d0d0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin: 0;
+    }
 
     .detail {
       max-width: 960px;
-      margin: 0 auto;
+      margin: 26px auto 0;
       text-align: left;
       color: #ddd;
       font-size: 0.98rem;
-      line-height: 1.65;
+      line-height: 1.75;
     }
+    .detail p { margin: 0 0 18px; }
 
+    /* Comparison table */
     .comparison {
       max-width: 960px;
-      margin: 0 auto;
-      text-align: left;
-      border-collapse: collapse;
+      margin: 30px auto 0;
       width: 100%;
-      margin-top: 20px;
+      border-collapse: collapse;
+      text-align: left;
     }
 
-    .comparison th, .comparison td {
-      padding: 14px;
-      border-bottom: 1px solid rgba(212,175,55,0.2);
-      font-size: 0.95rem;
+    .comparison th,
+    .comparison td {
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(212,175,55,0.18);
+      font-size: 0.92rem;
+      color: #ddd;
+      vertical-align: top;
     }
 
     .comparison th {
       color: #d4af37;
-      text-align: left;
+      font-weight: 600;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .comparison tr:last-child td { border-bottom: none; }
+
+    .cta-row {
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .cta {
       display: inline-block;
-      margin-top: 34px;
-      padding: 14px 36px;
+      padding: 14px 34px;
       background: #d4af37;
       color: #000;
       font-weight: 700;
@@ -111,9 +164,15 @@
       font-size: 0.95rem;
     }
 
-    /* FORM */
+    .cta.secondary {
+      background: transparent;
+      border: 1px solid rgba(212,175,55,0.55);
+      color: #d4af37;
+    }
+
+    /* Form */
     form {
-      max-width: 520px;
+      max-width: 560px;
       margin: 30px auto 0;
       text-align: left;
     }
@@ -122,7 +181,7 @@
       display: block;
       margin-bottom: 6px;
       font-size: 0.9rem;
-      color: #ccc;
+      color: #cfcfcf;
     }
 
     input, textarea {
@@ -144,10 +203,11 @@
       border-radius: 999px;
       font-weight: 700;
       cursor: pointer;
+      color: #000;
     }
 
     footer {
-      padding: 25px 20px;
+      padding: 28px 20px;
       font-size: 0.85rem;
       color: #888;
     }
@@ -167,167 +227,146 @@
   <h1>Institutional Supported Housing Leasing</h1>
 
   <p class="intro">
-    BRB Property Solutions provides professional and institutional landlords
-    with a structured, long-term leasing model into supported social housing.
-    <br><br>
-    Our approach delivers <strong>guaranteed rent</strong>, <strong>operational certainty</strong>,
-    and <strong>full asset management</strong>, removing volatility and day-to-day involvement
-    while supporting ethical housing outcomes.
+    A structured long-term leasing model for professional and institutional landlords,
+    offering <strong>guaranteed rent</strong>, <strong>full management</strong>, and
+    <strong>asset oversight</strong> within supported social housing pathways.
   </p>
+
+  <div class="cta-row">
+    <a class="cta" href="#contact">Discuss Suitability</a>
+    <a class="cta secondary" href="supported-social-housing-councils.html">Council Overview</a>
+    <a class="cta secondary" href="compliance.html">Compliance</a>
+  </div>
 </header>
 
 <section>
-  <h2>Designed for Portfolio & Professional Landlords</h2>
+  <div class="wrap">
+    <h2>Built for Portfolio & Professional Landlords</h2>
 
-  <div class="detail">
-    <p>
-      This leasing model is built specifically for landlords managing
-      portfolios, investment vehicles, or long-term holdings who prioritise
-      income stability, governance, and asset protection.
-    </p>
-
-    <p>
-      BRB Property Solutions leases properties directly, remains contractually
-      responsible throughout the term, and manages the interface between
-      housing partners, support providers, and local authorities.
-    </p>
-
-    <p>
-      While residents may change, the lease structure and rental income
-      remain consistent, providing a predictable cash-flow profile
-      comparable to other institutional leasing arrangements.
-    </p>
-  </div>
-</section>
-
-<section>
-  <h2>Key Commercial Benefits</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Guaranteed Rental Income</h3>
+    <div class="detail">
       <p>
-        Rent paid for the full lease term, independent of voids,
-        arrears, or resident turnover.
+        This model is designed for landlords and asset owners who prioritise stable income,
+        clear governance, and minimal operational burden. BRB Property Solutions leases
+        properties directly and remains responsible throughout the term.
       </p>
-    </div>
-
-    <div class="card">
-      <h3>Long-Term Lease Structures</h3>
       <p>
-        Reduced churn and stable income over multi-year lease arrangements.
+        While residents may change, the lease structure and rental payments remain consistent.
+        We oversee management, inspections, compliance processes, and liaison with housing partners.
       </p>
-    </div>
-
-    <div class="card">
-      <h3>Full Operational Management</h3>
       <p>
-        All management, inspections, compliance oversight, and coordination handled.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Asset Condition Protection</h3>
-      <p>
-        Properties monitored throughout the lease and returned
-        in an agreed condition.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Single Point of Accountability</h3>
-      <p>
-        BRB Property Solutions remains responsible,
-        reducing landlord exposure to operational risk.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Ethical, Council-Aligned Use</h3>
-      <p>
-        Homes are used within regulated supported housing pathways,
-        aligned with local authority frameworks.
+        Asset protection is addressed through documented standards, routine oversight, and an agreed
+        end-of-term condition position (subject to the lease terms and fair wear and tear).
       </p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>Comparison: Supported Housing Leasing vs Traditional Letting</h2>
+<section class="section-soft">
+  <div class="wrap">
+    <h2>Key Commercial Benefits</h2>
 
-  <table class="comparison">
-    <tr>
-      <th>Factor</th>
-      <th>Supported Housing Leasing</th>
-      <th>Traditional Letting</th>
-    </tr>
-    <tr>
-      <td>Rental Income</td>
-      <td>Guaranteed for lease term</td>
-      <td>Subject to voids and arrears</td>
-    </tr>
-    <tr>
-      <td>Lease Duration</td>
-      <td>Long-term, multi-year</td>
-      <td>Typically 6–12 months</td>
-    </tr>
-    <tr>
-      <td>Management Burden</td>
-      <td>Fully outsourced</td>
-      <td>Landlord or agent managed</td>
-    </tr>
-    <tr>
-      <td>Income Volatility</td>
-      <td>Low</td>
-      <td>High</td>
-    </tr>
-    <tr>
-      <td>Asset Oversight</td>
-      <td>Contractual condition protection</td>
-      <td>Variable, deposit-dependent</td>
-    </tr>
-  </table>
-</section>
+    <div class="grid">
+      <div class="card">
+        <h3>Guaranteed Rental Income</h3>
+        <p>Rent paid for the lease term, independent of voids, arrears, or resident turnover.</p>
+      </div>
 
-<section id="contact">
-  <h2>Discuss Portfolio Suitability</h2>
+      <div class="card">
+        <h3>Long-Term Lease Structures</h3>
+        <p>Multi-year arrangements reduce churn and support predictable forward income visibility.</p>
+      </div>
 
-  <p class="intro">
-    We assess properties and portfolios on an individual basis
-    and provide clear commercial terms before proceeding.
-  </p>
+      <div class="card">
+        <h3>Full Operational Management</h3>
+        <p>Management, inspections, compliance oversight, repairs coordination, and partner liaison.</p>
+      </div>
 
-  <form
-    action="https://formsubmit.co/your@email.com"
-    method="POST"
-  >
-    <input type="hidden" name="_subject" value="Institutional Supported Housing Enquiry">
-    <input type="hidden" name="_template" value="table">
+      <div class="card">
+        <h3>Asset Oversight</h3>
+        <p>Routine monitoring and documented standards support condition protection during the lease.</p>
+      </div>
 
-    <label>Name</label>
-    <input type="text" name="name" required>
+      <div class="card">
+        <h3>Single Point of Accountability</h3>
+        <p>BRB Property Solutions remains responsible, reducing landlord exposure to operational risk.</p>
+      </div>
 
-    <label>Email</label>
-    <input type="email" name="email" required>
-
-    <label>Portfolio / Property Overview</label>
-    <textarea name="details" rows="4" required></textarea>
-
-    <button type="submit">Submit Enquiry</button>
-  </form>
+      <div class="card">
+        <h3>Ethical, Council-Aligned Use</h3>
+        <p>Homes used within supported housing pathways aligned with local authority expectations.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
-  <h2>Local Authority & Housing Teams</h2>
+  <div class="wrap">
+    <h2>Comparison vs Traditional Letting</h2>
 
-  <p class="intro">
-    A council-facing overview of our supported housing delivery
-    and governance framework is available separately.
-  </p>
+    <table class="comparison">
+      <tr>
+        <th style="width:28%;">Factor</th>
+        <th>Supported Housing Leasing</th>
+        <th>Traditional Letting</th>
+      </tr>
+      <tr>
+        <td>Rental Income</td>
+        <td>Guaranteed for lease term</td>
+        <td>Often impacted by voids and arrears</td>
+      </tr>
+      <tr>
+        <td>Lease Duration</td>
+        <td>Long-term, multi-year</td>
+        <td>Commonly 6–12 months</td>
+      </tr>
+      <tr>
+        <td>Operational Burden</td>
+        <td>Fully managed</td>
+        <td>Landlord/agent managed</td>
+      </tr>
+      <tr>
+        <td>Income Volatility</td>
+        <td>Lower</td>
+        <td>Higher</td>
+      </tr>
+      <tr>
+        <td>Asset Oversight</td>
+        <td>Structured oversight + agreed condition approach</td>
+        <td>Variable (tenancy dependent)</td>
+      </tr>
+    </table>
+  </div>
+</section>
 
-  <a href="supported-social-housing-councils.html" class="cta">
-    Council & Housing Team Information
-  </a>
+<section id="contact" class="section-soft">
+  <div class="wrap">
+    <h2>Discuss Portfolio Suitability</h2>
+
+    <p class="intro">
+      Share a brief overview and we’ll confirm suitability and next steps.
+      (Replace the email below with your own.)
+    </p>
+
+    <form action="https://formsubmit.co/your@email.com" method="POST">
+      <input type="hidden" name="_subject" value="Institutional Supported Housing Enquiry">
+      <input type="hidden" name="_template" value="table">
+
+      <label>Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Portfolio / Property Overview</label>
+      <textarea name="details" rows="4" required></textarea>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+
+    <p style="max-width:960px;margin:18px auto 0;color:#888;font-size:0.9rem;line-height:1.5;">
+      For local authorities: see <a href="supported-social-housing-councils.html" style="color:#d4af37;text-decoration:none;font-weight:700;">Council & Housing Team Information</a>.
+    </p>
+  </div>
 </section>
 
 <footer>
@@ -335,6 +374,7 @@
     <a href="index.html">Home</a> |
     <a href="for-landlords.html">Landlords</a> |
     <a href="supported-social-housing.html">Supported Housing</a> |
+    <a href="for-local-authorities.html">Local Authorities</a> |
     <a href="compliance.html">Compliance</a>
   </p>
   © 2025 BRB Property Solutions
