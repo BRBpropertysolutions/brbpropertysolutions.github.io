@@ -16,8 +16,14 @@
       text-align: center;
     }
 
-    header { padding: 70px 20px 50px; }
-    .logo { max-width: 220px; margin-bottom: 20px; }
+    header {
+      padding: 70px 20px 50px;
+    }
+
+    .logo {
+      max-width: 220px;
+      margin-bottom: 20px;
+    }
 
     .tagline {
       font-size: 1.2rem;
@@ -27,49 +33,58 @@
     }
 
     .intro {
-      max-width: 900px;
-      margin: 0 auto 30px;
+      max-width: 920px;
+      margin: 0 auto;
       line-height: 1.65;
       color: #ddd;
       font-size: 1.05rem;
     }
 
-    section { padding: 70px 20px; }
-    h2 { color: #d4af37; margin-bottom: 26px; }
+    section {
+      padding: 70px 20px;
+    }
 
-    /* Core grid */
+    h2 {
+      color: #d4af37;
+      margin-bottom: 32px;
+    }
+
+    /* Symmetrical grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 26px;
-      max-width: 1000px;
+      gap: 30px;
+      max-width: 1050px;
       margin: 0 auto;
       text-align: left;
     }
 
-    @media (max-width: 720px) {
-      .grid { grid-template-columns: 1fr; }
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
-      background: rgba(0,0,0,0.65);
-      border: 1px solid rgba(212,175,55,0.25);
-      border-radius: 14px;
-      padding: 28px;
-      min-height: 180px;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 16px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      min-height: 220px;
     }
 
     .card h3 {
       color: #d4af37;
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      font-size: 1.05rem;
     }
 
     .card p {
-      color: #d0d0d0;
+      color: #d6d6d6;
       font-size: 0.95rem;
       line-height: 1.6;
       margin: 0;
@@ -77,14 +92,14 @@
 
     /* Featured centred card */
     .featured {
-      max-width: 420px;
-      margin: 40px auto 0;
+      max-width: 460px;
+      margin: 50px auto 0;
     }
 
     .cta {
       display: inline-block;
-      margin-top: 28px;
-      padding: 14px 34px;
+      margin-top: 34px;
+      padding: 14px 36px;
       background: #d4af37;
       color: #000;
       font-weight: 700;
@@ -111,66 +126,13 @@
 
 <header>
   <img src="logo.png" alt="BRB Property Solutions Logo" class="logo">
+
   <div class="tagline">Ethical Housing. Professional Property Solutions.</div>
 
   <p class="intro">
-    Providing responsible, transparent, and compliant property solutions for
-    landlords, investors, and local authority partners across the UK.
-  </p>
-</header>
-
-<section>
-  <h2>For Landlords & Property Owners</h2>
-
-  <!-- Core benefits (symmetrical) -->
-  <div class="grid">
-    <div class="card">
-      <h3>Guaranteed Rent</h3>
-      <p>Predictable monthly income with no voids or arrears risk.</p>
-    </div>
-
-    <div class="card">
-      <h3>Hands-Off Management</h3>
-      <p>We manage tenants, compliance, inspections, and liaison.</p>
-    </div>
-
-    <div class="card">
-      <h3>Professional & Compliant Use</h3>
-      <p>Properties supplied within regulated housing frameworks.</p>
-    </div>
-
-    <div class="card">
-      <h3>Long-Term Stability</h3>
-      <p>Secure agreements designed for long-term income certainty.</p>
-    </div>
-  </div>
-
-  <!-- Featured centred offer -->
-  <div class="featured">
-    <div class="card">
-      <h3>Supported Social Housing Leasing</h3>
-      <p>
-        Long-term supported housing leases with guaranteed rent,
-        full management, and asset condition protection.
-      </p>
-    </div>
-  </div>
-
-  <a href="supported-social-housing.html" class="cta">
-    Supported Social Housing
-  </a>
-</section>
-
-<footer>
-  <p>
-    <a href="index.html">Home</a> |
-    <a href="for-landlords.html">Landlords</a> |
-    <a href="supported-social-housing.html">Supported Housing</a> |
-    <a href="compliance.html">Compliance</a>
-  </p>
-  © 2025 BRB Property Solutions
-</footer>
-
-</body>
-</html>
-
+    BRB Property Solutions provides responsible, transparent, and compliant
+    property solutions for landlords, investors, and local authority partners
+    across the UK.
+    <br><br>
+    We specialise in professionally managed housing arrangements that prioritise
+    stability, gove
