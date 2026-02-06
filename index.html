@@ -8,6 +8,9 @@
   <link rel="icon" href="favicon-192.png">
 
   <style>
+    /* Prevent “broken boxes” caused by padding/border overflow */
+    *, *::before, *::after { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -16,14 +19,8 @@
       text-align: center;
     }
 
-    header {
-      padding: 70px 20px 50px;
-    }
-
-    .logo {
-      max-width: 220px;
-      margin-bottom: 20px;
-    }
+    header { padding: 70px 20px 50px; }
+    .logo { max-width: 220px; margin-bottom: 20px; }
 
     .tagline {
       font-size: 1.2rem;
@@ -40,46 +37,38 @@
       font-size: 1.05rem;
     }
 
-    section {
-      padding: 70px 20px;
-    }
+    section { padding: 70px 20px; }
+    h2 { color: #d4af37; margin-bottom: 28px; }
 
-    h2 {
-      color: #d4af37;
-      margin-bottom: 32px;
-    }
-
-    /* Symmetrical grid */
+    /* ---------- SYMMETRICAL GRID (UNBREAKABLE) ---------- */
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      max-width: 1050px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 1080px;
       margin: 0 auto;
       text-align: left;
+      align-items: stretch;
     }
 
-    @media (max-width: 760px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
     }
 
     .card {
       background: rgba(0, 0, 0, 0.65);
       border: 1px solid rgba(212, 175, 55, 0.28);
       border-radius: 16px;
-      padding: 30px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      min-height: 220px;
+      gap: 10px;
+      min-width: 0; /* prevents overflow */
     }
 
     .card h3 {
       color: #d4af37;
-      margin-top: 0;
-      margin-bottom: 14px;
+      margin: 0;
       font-size: 1.05rem;
     }
 
@@ -90,16 +79,25 @@
       margin: 0;
     }
 
-    /* Featured centred card */
-    .featured {
-      max-width: 460px;
-      margin: 50px auto 0;
+    /* Featured card: centred and symmetrical */
+    .card.featured {
+      grid-column: 1 / -1;     /* spans both columns */
+      max-width: 520px;        /* keeps it visually “featured” */
+      margin: 0 auto;          /* centres it */
+      text-align: left;
+    }
+
+    .cta-row {
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .cta {
       display: inline-block;
-      margin-top: 34px;
-      padding: 14px 36px;
+      padding: 14px 34px;
       background: #d4af37;
       color: #000;
       font-weight: 700;
@@ -108,17 +106,124 @@
       font-size: 0.95rem;
     }
 
+    .cta.secondary {
+      background: transparent;
+      border: 1px solid rgba(212,175,55,0.55);
+      color: #d4af37;
+    }
+
+    /* Governance list */
+    .docs ul {
+      list-style: none;
+      padding: 0;
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .docs li { margin: 12px 0; }
+    .docs a { color: #d4af37; text-decoration: none; font-weight: 600; }
+
+    /* Compliance badges (linked + tooltips) */
+    .compliance {
+      padding: 40px 20px 10px;
+      text-align: center;
+    }
+
+    .compliance-title {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 18px;
+    }
+
+    .compliance-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .compliance-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(0, 0, 0, 0.55);
+      padding: 12px 14px;
+      position: relative;
+    }
+
+    .compliance-link:hover { border-color: rgba(212, 175, 55, 0.55); }
+
+    .compliance-link img {
+      width: auto;
+      height: auto;
+      opacity: 0.92;
+      display: block;
+    }
+
+    .compliance-link.ico img { max-height: 52px; }
+    .compliance-link.llas img { max-height: 64px; }
+    .compliance-link.prs img { max-height: 50px; }
+
+    .compliance-link[data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 10px);
+      transform: translateX(-50%);
+      width: min(560px, calc(100vw - 40px));
+      background: rgba(0,0,0,0.92);
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: #ddd;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 160ms ease;
+      text-align: left;
+      z-index: 30;
+    }
+
+    .compliance-link[data-tooltip]::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 3px);
+      transform: translateX(-50%);
+      border: 7px solid transparent;
+      border-top-color: rgba(212,175,55,0.35);
+      opacity: 0;
+      transition: opacity 160ms ease;
+      z-index: 31;
+    }
+
+    .compliance-link:hover::after,
+    .compliance-link:hover::before { opacity: 1; }
+
+    .compliance-note {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 6px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
     footer {
       padding: 28px 20px;
       font-size: 0.85rem;
       color: #888;
     }
-
-    footer a {
-      color: #888;
-      text-decoration: none;
-      margin: 0 6px;
-    }
+    footer a { color: #888; text-decoration: none; margin: 0 6px; }
   </style>
 </head>
 
@@ -126,13 +231,153 @@
 
 <header>
   <img src="logo.png" alt="BRB Property Solutions Logo" class="logo">
-
   <div class="tagline">Ethical Housing. Professional Property Solutions.</div>
 
   <p class="intro">
-    BRB Property Solutions provides responsible, transparent, and compliant
-    property solutions for landlords, investors, and local authority partners
-    across the UK.
+    BRB Property Solutions provides responsible, transparent, and compliant property solutions for
+    landlords, investors, and local authority partners across the UK.
     <br><br>
-    We specialise in professionally managed housing arrangements that prioritise
-    stability, gove
+    We specialise in professionally managed housing arrangements that prioritise stability,
+    governance, and long-term partnerships.
+  </p>
+</header>
+
+<section>
+  <h2>For Landlords & Property Owners</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Guaranteed Rent</h3>
+      <p>
+        We lease properties directly from landlords, providing predictable,
+        contracted rental income for the duration of the agreement.
+        Rent is paid regardless of void periods or occupancy changes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Hands-Off Management</h3>
+      <p>
+        We manage day-to-day operations including inspections, compliance oversight,
+        maintenance coordination, and housing partner liaison — reducing landlord involvement.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Professional & Compliant Use</h3>
+      <p>
+        Properties are supplied within structured housing frameworks with safeguarding,
+        governance, and accountability embedded throughout the management process.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Long-Term Stability</h3>
+      <p>
+        Our agreements are designed for landlords seeking secure longer-term arrangements,
+        reducing churn and providing income certainty.
+      </p>
+    </div>
+
+    <!-- Featured, centred, symmetrical -->
+    <div class="card featured">
+      <h3>Supported Social Housing Leasing</h3>
+      <p>
+        For suitable properties, we offer long-term leasing into supported social housing arrangements.
+        This includes guaranteed rent, full management, and contractual protection of the property’s condition.
+      </p>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="for-landlords.html" class="cta secondary">Landlord Information</a>
+    <a href="landlord-faq.html" class="cta secondary">Landlord FAQ</a>
+    <a href="supported-social-housing.html" class="cta">Supported Social Housing</a>
+  </div>
+</section>
+
+<section>
+  <h2>For Local Authorities</h2>
+
+  <p class="intro">
+    We work in partnership with local authorities to deliver professionally managed, compliant accommodation
+    for temporary, emergency, and supported housing requirements.
+  </p>
+
+  <a href="for-local-authorities.html" class="cta">Local Authority Information</a>
+</section>
+
+<section class="docs">
+  <h2>Governance, Compliance & Safeguarding</h2>
+
+  <p class="intro" style="max-width:760px;">
+    Documentation available for landlords, housing teams, and procurement officers:
+  </p>
+
+  <ul>
+    <li><a href="safeguarding-policy.html">Safeguarding Policy</a></li>
+    <li><a href="complaints-procedure.html">Complaints & Redress Procedure</a></li>
+    <li><a href="property-compliance.html">Property Compliance Information</a></li>
+    <li><a href="management-inspection.html">Management & Inspection Processes</a></li>
+    <li><a href="equality-diversity.html">Equality, Diversity & Inclusion Statement</a></li>
+    <li><a href="health-safety.html">Health & Safety Statement</a></li>
+  </ul>
+</section>
+
+<section class="compliance">
+  <p class="compliance-title">Accreditation & Data Protection</p>
+
+  <div class="compliance-logos">
+    <a
+      class="compliance-link ico"
+      href="https://ico.org.uk/esdwebpages/search"
+      target="_blank"
+      rel="noopener"
+      data-tooltip="ICO Data Protection Register: search by reference ZC083608. Click to verify on the ICO public register."
+      aria-label="Verify ICO registration on the ICO register (opens in new tab)"
+    >
+      <img src="ico-logo.png" alt="ICO Registered">
+    </a>
+
+    <a
+      class="compliance-link llas"
+      href="https://www.londonlandlords.org.uk/search/accredited/"
+      target="_blank"
+      rel="noopener"
+      data-tooltip="LLAS Accreditation: search by number 26041450. Click to verify via the LLAS accredited landlord/company search."
+      aria-label="Verify LLAS accreditation on the LLAS register (opens in new tab)"
+    >
+      <img src="llas-logo.png" alt="London Landlord Accreditation Scheme (LLAS)">
+    </a>
+
+    <a
+      class="compliance-link prs"
+      href="certificates/prs-certificate.pdf"
+      target="_blank"
+      rel="noopener"
+      data-tooltip="Property Redress Scheme (PRS): membership certificate available for audit/procurement evidence. Click to open PDF."
+      aria-label="Open PRS certificate PDF (opens in new tab)"
+    >
+      <img src="PRS_Logo.jpg" alt="Property Redress Scheme (PRS)">
+    </a>
+  </div>
+
+  <p class="compliance-note">
+    See full details and certificates on our
+    <a href="compliance.html" style="color:#d4af37;text-decoration:none;font-weight:600;">Compliance</a> page.
+  </p>
+</section>
+
+<footer>
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="for-landlords.html">Landlords</a> |
+    <a href="supported-social-housing.html">Supported Housing</a> |
+    <a href="for-local-authorities.html">Local Authorities</a> |
+    <a href="compliance.html">Compliance</a>
+  </p>
+  © 2025 BRB Property Solutions
+</footer>
+
+</body>
+</html>
